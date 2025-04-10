@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature - Wikipedia</title>
+    <script src="https://kit.fontawesome.com/df95116d29.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        nav
+        {
+            width: 99%;
+            height: 60px;
+        }
+        .nav-container
+        {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content:start;
+        }
+        .nav-head
+        {
+            width: 130px;
+            height:10%;
+        }
+        .nav-search
+        {
+            width:fit-content;
+            border: 2px solid black;
+            height: fit-content;
+            margin-top: 10px;
+        }
+        .nav-item
+        {
+            margin-left:47%;
+            align-items: end;
+        }
+        .nav-item ul li
+        {
+            list-style: none;
+            display: inline-block;
+            margin-left:5px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .logo img {
+            height: 50px; /* Adjust as needed */
+        }
+        
+        .search-bar input {
+            padding: 8px;
+            width: 200px; /* Adjust width as needed */
+        }
+        
+        .top-links {
+            display: flex;
+            align-items: center;
+        }
+        
+        .top-links span {
+            margin-right: 10px;
+        }
+        
+        .content-area {
+            display: flex;
+            flex: 1;
+        }
+        
+        .sidebar {
+            width: 200px; /* Adjust sidebar width */
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        
+        .sidebar h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .sidebar ul li
+        {
+            list-style: none;
+            color:blue;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .article-header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .article-header p {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .article-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #0645ad;
+        }
+        
+        .article-body {
+            margin-bottom: 20px;
+        }
+        
+        .appearance-settings {
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        
+        .setting-group {
+            margin-bottom: 15px;
+        }
+        
+        .setting-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .setting-group button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+        .ul li
+        {
+            display: inline-block;
+        }
+        img
+        {
+            margin-left: 7px;
+            margin-top: 5px;
+            margin-right:10px ;
+            width: 250px;
+        }
+        .nav2
+        {
+            background-color: orange;
+            height: 50px;
+            margin: 10px;
+            box-shadow:rgb(0, 0, 0) 1px 1px 20px 20px;
+        }
+        .nav2 ul
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .nav2 ul li
+        {
+            margin-top: 10px;
+            display: inline;
+            color:rgb(255, 0, 255);
+            font-size: 20px;
+        }
+        /* Laptop Specific Styles (example: min-width) */
+        @media screen and (min-width: 992px) {
+            .container {
+                max-width: 1200px; /* You can adjust as per your design */
+                margin: 0 auto;
+            }
+        
+            .sidebar {
+                width: 250px;
+            }
+        
+            .main-content {
+                padding: 30px;
+            }
+        
+            .article-header h1 {
+                font-size: 2.5em;
+            }
+            .search-bar input {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Assignment-2</h2>
+    <nav>
+        <div class="nav-container">
+            <i class="fa-solid fa-bars" style="margin:10px"></i>
+            <i class="fa-solid fa-earth"style="margin:10px" ></i>
+            <div class="nav-head" style="margin:5px">
+                WIKIPEDIA
+                <p style="font-size: 10px;">THE FREE ENCYCLOPEDIA</p>
+            </div>
+            <div class="nav-search">
+                <i class="fa-solid fa-bars" style="margin:4px"></i>
+                <input type="text" placeholder="Search wikipedia" style="border: none; background:transparent;outline:none;margin-bottom:4px"/>
+                <button style="border: none; margin-right:4px;background:transparent">Search</button>
+            </div>
+            <div class="nav-item">
+                <ul>
+                    <li>Donete</li>
+                    <li>Create Account</li>
+                    <li>Log In</li>
+                    <li><i class="fa-solid fa-bars"></i></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="content-area">
+            <div class="sidebar">
+                <div class="contents">
+                    <h2>Contents</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-chevron-down"></i>Earth
+                            <ul>
+                                <li>Geology</li>
+                                <ul>
+                                    <li>Geological evolution</li>
+                                </ul>
+                                <li>Historical perspective</li>
+                                <li>Atmosphere, climate and weather</li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-down"></i>Water on Earth
+                            <ul>
+                                <li>Oceans</li>
+                                <li>Lakes</li>
+                                <ul>
+                                    <li>Pounds</li>
+                                </ul>
+                                <li>Rivers</li>
+                                <li>Streams</li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-down"></i></i>Ecosystems
+                            <ul>
+                                <li>Wilderness</li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-down"></i>Life
+                            <ul>
+                                <li>Evolution</li>
+                                <li>Microbes</li>
+                                <li>Plants and animals</li>
+                            </ul>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-down"></i>Human interrelationship
+                            <ul>
+                                <li>Human</li>
+                                <li>Aesthatic and Beauty</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="article-header">
+                    <h1>Nature</h1>
+                    <hr/>
+                    <ul class="ul">
+                        <li><u>Article</u></li>
+                        <li>Talk</li>
+                        <li style="margin-left:50%"><u>Read</u></li>
+                        <li>View Source</li>
+                        <li>View history</li>
+                        <li>Tools</li>
+                        <li><i class="fa-solid fa-chevron-down"></i></li>
+                    </ul>
+                    <hr>
+                    <p>"Natural" redirects here.
+                        For other uses see Natuwal (disambiguation) and Nature (disambiguation)</p>
+                </div>
+                <div class="article-body">
+                    <div class="div" style="width: 100%;display:flex;">
+                        <div style="width: 70%;"><p><b>Nature</b> is an inherent character or constitution, particularly of the ecosphere or the
+                            universe as a whole, in this general sense nature refers to the laws, elements and
+                            phenomena of the physical world, including life. [cite: 2] Although humans are part of nature.
+                            human activity or humans as a whole are often described as at times at odds, or outright
+                            separate and even supenor to nature,</p>
+    
+                        <p>During the advent of modern scientific method in the last several centuries, nature
+                            became the passive reality, organized and moved by divine laws. [cite: 4] With the industrat
+                            Revolution, nature increasingly became seen as the part of reality depnved from
+                            intentional intervention: it was hence considered as sacred by some traditions
+    
+                            (Roussels, Amençan manscendentalism) or a mere decorum for divine providence or
+                            human history (Hegel, Man). [cite: 5] However, a vitalist vision of nature, closer to the pre-
+                            Socratic one, got retiom at the same time, especially after Charles Darwn</p></div>
+                        <div style="width: 30%;border:1px solid black;height:300px">
+                            <img src="https://wallpapercave.com/wp/wp6545483.jpg" alt="">
+                            <p style="margin-left: 7px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate              w1212 </p>
+                        </div>
+
+                    </div>
+                    <p>Within the various uses of the word today, "nature" often refers to geology and wildlife. [cite: 6] Asmawlapse composite panorama of
+                        different natural phenomena and
+                        environments around Mouur
+                        Indonesis</p>
+
+                    <p>Nature can refer to the general realm of living beings, and in some cases to the processes associated with inanimate objects the
+                        way that particular types of things exist and change of their own accord, such as the weather and geology of the Earth. [cite: 7] it is often
+                        taken to mean the "natural environment or wildemers-wild animals, rocks, forest, and in general those things that have not been
+                        substantially altered by human intervention, or which persist despite human intervention. For example, manufactured objects and
+                        human interaction generally are not considered part of nature, unless qualified as, for example, "human nature" or "the whole of
+                        nature" This more traditional concept of natural things that can still be found today implies a distinction between the natural and the
+                        artificial, with the artificial being understood as that which has been brought into being by a human conscommess or a human mind
+                        Depending on the </p>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="contents">
+                    <h2><b>Appereance</b></h2>
+                    <hr>
+                    Text <hr>
+                    <ul>        
+                        <li><input type="radio" id="small" name="text"><label for="small">Small</label></li>
+                        <li><input type="radio" id="standard" name="text"><label for="standard">Standard</label></li>
+                        <li><input type="radio" id="large" name="text"><label for="large">Large</label></li>
+                    </ul>
+                    Width <hr>
+                    <ul>        
+                        <li><input type="radio" id="standard" name="width"><label for="standard">Standard</label></li>
+                        <li><input type="radio" id="wide" name="width"><label for="wide">Wide</label></li>
+                    </ul>
+                    Color (beta) <hr>
+                    <ul>        
+                        <li><input type="radio" id="automatic" name="color"><label for="automatic">Small</label></li>
+                        <li><input type="radio" id="light" name="color"><label for="light">Standard</label></li>
+                        <li><input type="radio" id="dark" name="color"><label for="dark">Large</label></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br>
+<nav class="nav2">
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Term of Use</li>
+        <li>Join Us</li> 
+    </ul>
+</nav>
+<hr>
+
+</body>
+</html>
