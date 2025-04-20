@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">
+
+    </div>
+
+    <input type="text" id="input"/>
+    <button id="submit">Submit</button>
+    <script>
+        let url="https://d91f-157-38-245-63.ngrok-free.app/ask";
+        document.querySelector("#submit").addEventListener('click',()=>
+        {
+            let prompt=document.querySelector("#input").value;
+            let obj={"prompt":prompt}
+            ask(obj);
+        })
+
+        async function ask(obj)
+        {
+            let api =await fetch(url,{
+                method:"post",
+                headers:{'Content-Type':"application/json"},
+                body:JSON.stringify(obj)
+            });
+            let response=await api.json();
+                console.log(api);
+            if(api.ok)
+            {
+                let response=await api.json();
+                console.log(api);
+            }
+        }
+    </script>
+</body>
+</html>
